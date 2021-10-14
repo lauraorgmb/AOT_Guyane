@@ -34,7 +34,7 @@ def date_range(date_start, date_end):
 
     Returns
     -------
-    df : dataframe
+    df_dates : dataframe
         DATAFRAME CONTAINING ALL DATES OF THE PERIOD OF INTEREST.
 
     """

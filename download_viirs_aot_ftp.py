@@ -48,8 +48,10 @@ def date_range(date_start, date_end):
 if __name__ == "__main__":
 
     #set working directory
-    WD = r"C:\Users\cath\Desktop\Laura\Données"
-    VIIRS_WD = os.path.join(WD, r"AOT_VIIRS\Gridded_AOTEDR")
+    WD = os.getcwd()
+    VIIRS_WD = os.path.join(WD, r"Guyane\Gridded_AOTEDR")
+    if not os.path.exists(VIIRS_WD):
+        os.makedirs(VIIRS_WD)
 
     #set url from where to download files
     PRE_URL = "ftp://ftp.star.nesdis.noaa.gov/pub/smcd/VIIRS_Aerosol"
@@ -62,6 +64,8 @@ if __name__ == "__main__":
     for folder in class_AOT:
         #set class working directory
         WD_class = os.path.join(VIIRS_WD, folder)
+        if not os.path.exists(WD_class):
+            os.makedirs(WD_class)
         os.chdir(WD_class)
 
         #set PM10 dataframe path
@@ -91,8 +95,10 @@ if __name__ == "__main__":
 
     #set working directory
     FOLDER = "2012_all"
-    wd = os.path.join(VIIRS_WD, FOLDER)
-    os.chdir(wd)
+    WD_YEAR = os.path.join(VIIRS_WD, FOLDER)
+    if not os.path.exists(WD_YEAR):
+        os.makedirs(WD_YEAR)
+    os.chdir(WD_YEAR)
 
     ##give the dates of the tiles to download as str
     #create a range of datetime

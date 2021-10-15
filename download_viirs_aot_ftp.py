@@ -11,6 +11,7 @@ Desription : The following script is meant to download Gridded AOT EDR data
             gridded/idps/snpp/edraot550 .
             They are saved into 4 folders corresponding to four classes of PM10
             thresholds ([0:50[ // [50:100[ // [100:150[ // [150:] mg.m-3).
+            To run the script, don't forget to donwload PM10 dataframe!
 """
 
 import os
@@ -46,7 +47,7 @@ def date_range(date_start, date_end):
 #%%Batch download
 
 if __name__ == "__main__":
-
+    
     #set working directory
     WD = os.getcwd()
     VIIRS_WD = os.path.join(WD, r"Guyane\Gridded_AOTEDR")

@@ -70,7 +70,7 @@ if __name__ == "__main__":
         os.chdir(WD_class)
 
         #set PM10 dataframe path
-        TAB_PATH = os.path.join(WD, r"PM10\tableau_pics_mean_%s.xlsx"%(folder))
+        TAB_PATH = os.path.join(WD, r"Guyane\tableau_pics_mean_%s.xlsx"%(folder))
 
         #open table to obtain PM10 concentration
         PM10_df = pd.read_excel(TAB_PATH)
